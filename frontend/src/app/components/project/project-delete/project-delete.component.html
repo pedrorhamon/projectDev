@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-title>Excluir Projeto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+            [(ngModel)]="project.nome" name="nome" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Situação" 
+            [(ngModel)]="project.situacao" name="situacao" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Viabilidade" 
+            [(ngModel)]="project.viabilidade" name="viabilidade"disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data Início" 
+            [(ngModel)]="project.dataInicio" name="dataInicio"disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data Final" 
+            [(ngModel)]="project.dataFinal" name="dataFinal"disabled>
+        </mat-form-field>
+    </form>
+<button mat-raised-button (click)= "deleteProject()" color="warn">
+    Excluir
+</button>
+
+<button mat-raised-button (click)= "cancelProject()">
+    Cancelar
+</button>
+</mat-card>
